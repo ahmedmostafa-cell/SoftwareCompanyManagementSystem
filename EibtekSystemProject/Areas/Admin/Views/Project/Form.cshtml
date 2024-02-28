@@ -1,0 +1,267 @@
+﻿@model Domains.TbProject
+
+<div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                           
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="content-body">
+              
+                <!-- // Basic multiple Column Form section start -->
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Client</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                    <form enctype="multipart/form-data" method="post" role="form" asp-controller="Project" asp-action="Save" class="form">
+                                            <div class="form-body">
+                                                <div class="row" id="maindiv">
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="ProjectInstallmentNumbers" class="form-control" placeholder="Project Installment Numbers" asp-for="ProjectInstallmentNumbers">
+                                                        <label for="city-column">Project Installment Numbers</label>
+                                                    </div>
+                                                </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                            <input id="ProjectId" type="hidden" class="form-control">
+                                                        <input type="text"  class="form-control" placeholder="Project Name" id="ProjectName">
+                                                        <label for="first-name-column"> Project Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-12" data-select2-id="127">
+
+
+                                                        <div class="form-group" data-select2-id="126">
+
+                                                        <select class="select2 form-control select2-hidden-accessible" id="ClientId" asp-items="@(new SelectList(ViewBag.Clients , "ClientId" , "ClientName"))" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input type="text"  class="form-control" placeholder="Project Description" id="ProjectDescription">
+                                                        <label for="last-name-column">Project Description</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input type="text"  class="form-control" placeholder="Project Sales Price" id="ProjectSalesPrice">
+                                                        <label for="city-column">Project Sales Price</label>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                <div class="col-sm-6 col-12" data-select2-id="127">
+
+
+                                                    <div class="form-group" data-select2-id="126">
+
+                                                        <select class="select2 form-control select2-hidden-accessible" id="SalesEmployeeId" asp-items="@(new SelectList(ViewBag.Employees , "EmployeeId" , "EmplyeeName"))" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" class="form-control" placeholder="Sales Employee Percentage" id="SalesEmployeePercentage">
+                                                        <label for="city-column">Sales Employee Percentage</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text"  class="form-control" placeholder="Working Employess Number" id="WorkingEmployessNumber">
+                                                        <label for="city-column">Working Employess Number</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text"  class="form-control" placeholder="Project Cost" id="ProjectCost">
+                                                        <label for="city-column">Project Cost</label>
+                                                    </div>
+                                                </div>
+                                               
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                            <input class=" form-control" id="files" type="file" placeholder="Project Contract Pdf">
+                                                            <label for="company-column">Project Documents</label>
+                                                        </div>
+                                                    </div>
+                                                   @* <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                            <input type="email" id="email-id-column" class="form-control" name="email-id-column" placeholder="Email">
+                                                            <label for="email-id-column">Email</label>
+                                                        </div>
+                                                    </div>*@
+                                                  
+                                                    <div class="col-12">
+                                                    <button  type="submit" class="btn btn-primary mr-1 mb-1 waves-effect waves-light">Submit</button>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    <button id="ID" type="button" class="btn btn-primary mr-1 mb-1 waves-effect waves-light">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- // Basic Floating Label Form section end -->
+
+            </div>
+        </div>
+    </div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script>
+   
+    const olddiv = ($("#maindiv").html());
+   
+    let ProjectId = document.getElementById('ProjectId');
+    let ProjectInstallmentNumbers = document.getElementById('ProjectInstallmentNumbers');
+    $('#ProjectInstallmentNumbers').change(function () {
+       
+        $('div').remove('#ali');
+       
+      
+        for (let i = 0; i<ProjectInstallmentNumbers.value; i ++) {
+       
+        let itemhtmal = "<div id='ali' class='col-md-6 col-12'>";
+        itemhtmal = itemhtmal + " <div class='form-label-group'>";
+        itemhtmal = itemhtmal + "<input type='text' id='city-columns' class='form-control' placeholder='installmet'>";
+        itemhtmal = itemhtmal + " <label for='city-column'>Project Cost</label>";
+        itemhtmal = itemhtmal + "</div></div>";
+        itemhtmal = itemhtmal + "<div id='ali' class='col-md-6 col-12'>";
+        itemhtmal = itemhtmal + " <div class='form-label-group'>";
+        itemhtmal = itemhtmal + "<input type='date' id='city-columnss' class='form-control' placeholder='installmet'>";
+        itemhtmal = itemhtmal + " <label for='city-column'>Project Cost</label>";
+        itemhtmal = itemhtmal + "</div></div>";
+        $("#maindiv").append(itemhtmal);
+       
+           
+        } 
+       
+       
+       
+      
+
+    });
+    $(function () {
+        $("#ID").click(function () {
+
+          
+            let ClientId = document.getElementById('ClientId').value;
+            let ProjectInstallmentNumbers = document.getElementById('ProjectInstallmentNumbers').value;
+            let ProjectDescription = document.getElementById('ProjectDescription').value;
+            let ProjectSalesPrice = document.getElementById('ProjectSalesPrice').value;
+            let SalesEmployeeId = document.getElementById('SalesEmployeeId').value;
+            let SalesEmployeePercentage = document.getElementById('SalesEmployeePercentage').value;
+            let WorkingEmployessNumber = document.getElementById('WorkingEmployessNumber').value;
+            let ProjectCost = document.getElementById('ProjectCost').value;
+            let ProjectName = document.getElementById('ProjectName').value;
+            let files = document.getElementById('files');
+            var formdata = new FormData();
+            formdata.append("files", files.files[0]);
+            formdata.append("ProjectCost", ProjectCost);
+            formdata.append("ClientId", ClientId);
+            formdata.append("ProjectInstallmentNumbers", ProjectInstallmentNumbers);
+            formdata.append("ProjectDescription", ProjectDescription);
+            formdata.append("ProjectSalesPrice", ProjectSalesPrice);
+            formdata.append("SalesEmployeeId", SalesEmployeeId);
+            formdata.append("SalesEmployeePercentage", SalesEmployeePercentage);
+            formdata.append("WorkingEmployessNumber", WorkingEmployessNumber);
+            formdata.append("ProjectName", ProjectName);
+            var arr = [];
+            $('input#city-columns').each(function () {
+                arr.push($(this).val());
+                formdata.append("Ids", $(this).val());
+               
+            });
+             var arrdate = [];
+            $('input#city-columnss').each(function () {
+                arrdate.push($(this).val());
+                formdata.append("Idsdate", $(this).val());
+               
+            });
+           
+      
+
+            console.log(formdata);
+
+          
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Project/Save",
+                data: formdata,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: OnSuccessResult,
+                error: OnError
+            });
+            function OnSuccessResult(data) {
+
+                window.location.href = "/Admin/Project/Index";
+
+            }
+            function OnError(data) {
+
+            }
+        });
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

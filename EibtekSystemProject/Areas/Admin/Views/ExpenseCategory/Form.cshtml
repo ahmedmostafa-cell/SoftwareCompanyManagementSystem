@@ -1,0 +1,115 @@
+﻿@model Domains.TbExpenseCategory
+
+<div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                           
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="content-body">
+              
+                <!-- // Basic multiple Column Form section start -->
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Client</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                    <form enctype="multipart/form-data" method="post" role="form" asp-controller="ExpenseCategory" asp-action="Save" class="form">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                            <input asp-for="ExpenseCategoryId" type="hidden" class="form-control">
+                                                        <input type="text" id="first-name-column" class="form-control" placeholder="Expense Category Name" asp-for="ExpenseCategoryName">
+                                                        <label for="first-name-column"> Expense Category Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input type="text" id="last-name-column" class="form-control" placeholder="Expense Category Description" asp-for="ExpenseCategoryDescription">
+                                                        <label for="last-name-column">Expense Category Description</label>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                 
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input class=" form-control" name="files" type="file" placeholder="Expense Category Image">
+                                                        <label for="company-column">Expense Category Image</label>
+                                                        </div>
+                                                    </div>
+                                                  
+                                                  
+                                                    <div class="col-12">
+                                                    <button  type="submit" class="btn btn-primary mr-1 mb-1 waves-effect waves-light">Submit</button>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- // Basic Floating Label Form section end -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

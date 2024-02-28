@@ -1,0 +1,130 @@
+﻿@model Domains.TbPaidProjectInstallment
+
+<div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                           
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="content-body">
+              
+                <!-- // Basic multiple Column Form section start -->
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Client</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                    <form enctype="multipart/form-data" method="post" role="form" asp-controller="PaidProjectInstallment" asp-action="Save" class="form">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                <div class="col-sm-6 col-12" data-select2-id="127">
+
+
+                                                    <div class="form-group" data-select2-id="126">
+                                                        <input asp-for="UpdatedBy" type="hidden" class="form-control">
+                                                        <input asp-for="CreatedBy" type="hidden" class="form-control">
+                                                        <input asp-for="ProjectInstallmentId" type="hidden" class="form-control">
+                                                        <select class="select2 form-control select2-hidden-accessible" asp-for="SalesEmployeeId" asp-items="@(new SelectList(ViewBag.Employees , "EmployeeId" , "EmplyeeName"))" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                         
+                                                        <input type="text" id="first-name-column" class="form-control" placeholder="Project Installment Value" asp-for="ProjectInstallmentValue">
+                                                        <label for="first-name-column"> Project Installment Value</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input type="text" id="last-name-column" class="form-control" placeholder="Paid Project Installment Value" asp-for="PaidProjectInstallmentValue">
+                                                        <label for="last-name-column">Paid Project Installment Value</label>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input class=" form-control" name="files" type="file" placeholder="Paid Project Installment Document">
+                                                        <label for="company-column">Paid Project Installment Document</label>
+                                                        </div>
+                                                    </div>
+                                                   @* <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                            <input type="email" id="email-id-column" class="form-control" name="email-id-column" placeholder="Email">
+                                                            <label for="email-id-column">Email</label>
+                                                        </div>
+                                                    </div>*@
+                                                  
+                                                    <div class="col-12">
+                                                    <button  type="submit" class="btn btn-primary mr-1 mb-1 waves-effect waves-light">Submit</button>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- // Basic Floating Label Form section end -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

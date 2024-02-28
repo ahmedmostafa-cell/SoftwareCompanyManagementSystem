@@ -1,0 +1,156 @@
+﻿@model Domains.TbEmployee
+
+<div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                           
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="content-body">
+              
+                <!-- // Basic multiple Column Form section start -->
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Client</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                    <form enctype="multipart/form-data" method="post" role="form" asp-controller="Employee" asp-action="Save" class="form">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                            <input asp-for="EmployeeId" type="hidden" class="form-control">
+                                                        <input type="text" id="first-name-column" class="form-control" placeholder="Name" asp-for="EmplyeeName">
+                                                            <label for="first-name-column"> Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input type="text" id="last-name-column" class="form-control" placeholder="Salary" asp-for="EmployeeSalary">
+                                                            <label for="last-name-column">Salary</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Job Description" asp-for="EmployeeJobDescription">
+                                                        <label for="city-column">Job Description</label>
+                                                        </div>
+                                                    </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Work Hours" asp-for="EmployeeWorkHours">
+                                                        <label for="city-column">Work Hours</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Work Per Hour Value" asp-for="EmplyeeWorkHourValue">
+                                                        <label for="city-column">Work Per Hour Value</label>
+                                                    </div>
+                                                </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <select class="select2 form-control select2-hidden-accessible" asp-for="EmployeeSalaryCalculate" >
+                                                            <option selected>Choose A Method</option>
+                                                            <option value="Per  Hour">Per  Hour</option>
+                                                            <option value="By Moth">By Moth</option>
+                                                          
+
+                                                        </select>
+                                                        <label for="country-floating">Salary Calculate</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input class=" form-control" name="files" type="file" placeholder="Image Employee">
+                                                        <label for="company-column">Image Employee</label>
+                                                        </div>
+                                                    </div>
+                                                <div class="col-sm-6 col-12" data-select2-id="127">
+
+
+                                                    <div class="form-group" data-select2-id="126">
+                                                        <select class="select2 form-control select2-hidden-accessible" asp-for="EmployeeCategoryId" asp-items="@(new SelectList(ViewBag.employeeCategories , "EmployeeCategoryId" , "EmplyeeCategoryName"))" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                   @* <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                            <input type="email" id="email-id-column" class="form-control" name="email-id-column" placeholder="Email">
+                                                            <label for="email-id-column">Email</label>
+                                                        </div>
+                                                    </div>*@
+                                                  
+                                                    <div class="col-12">
+                                                    <button  type="submit" class="btn btn-primary mr-1 mb-1 waves-effect waves-light">Submit</button>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- // Basic Floating Label Form section end -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

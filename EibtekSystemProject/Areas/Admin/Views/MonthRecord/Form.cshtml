@@ -1,0 +1,187 @@
+﻿@model Domains.TbMonthRecord
+
+<div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                           
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="content-body">
+              
+                <!-- // Basic multiple Column Form section start -->
+                <section id="multiple-column-form">
+                    <div class="row match-height">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Client</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                    <form enctype="multipart/form-data" method="post" role="form" asp-controller="MonthRecord" asp-action="Save" class="form">
+                                            <div class="form-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                            <input asp-for="MonthRecordId" type="hidden" class="form-control">
+                                                        <input type="text" id="first-name-column" class="form-control" placeholder="Month Name" asp-for="MonthName">
+                                                        <label for="first-name-column"> Month Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input type="text" id="last-name-column" class="form-control" placeholder="Month Number" asp-for="MonthNumber">
+                                                        <label for="last-name-column">Month Number</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Year" asp-for="Year">
+                                                        <label for="city-column">Year</label>
+                                                        </div>
+                                                    </div>
+                                                     <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Income" asp-for="Income">
+                                                        <label for="city-column">Income</label>
+                                                        </div>
+                                                    </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Expense" asp-for="Expense">
+                                                        <label for="city-column">Expense</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Net Income" asp-for="NetIncome">
+                                                        <label for="city-column">Net Income</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Management Value" asp-for="ManagementValue">
+                                                        <label for="city-column">Management Value</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Zakah Value" asp-for="ZakahValue">
+                                                        <label for="city-column">Zakah Value</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Company Value" asp-for="CompanyValue">
+                                                        <label for="city-column">Company Value</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Fund" asp-for="Fund">
+                                                        <label for="city-column">Fund</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="city-column" class="form-control" placeholder="Withdrawal Value" asp-for="WithdrawalValue">
+                                                        <label for="city-column">Withdrawal Value</label>
+                                                    </div>
+                                                </div>
+                                                   @* <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <select class="select2 form-control select2-hidden-accessible" asp-for="CityName" >
+                                                            <option selected>Choose A City</option>
+                                                            <option value="Cairo">Cairo</option>
+                                                            <option value="Alexandria">Alexandria</option>
+                                                            <option value="Aciuot">Aciuot</option>
+                                                            <option value="Suez">Suez</option>
+                                                            <option value="Sharqia">Sharqia</option>
+                                                            <option value="Manofia">Manofia</option>
+
+                                                        </select>
+                                                            <label for="country-floating">City</label>
+                                                        </div>
+                                                    </div>*@
+                                                  @*  <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                        <input class=" form-control" name="files" type="file" placeholder="Image Client">
+                                                            <label for="company-column">Image Client</label>
+                                                        </div>
+                                                    </div>*@
+                                                   @* <div class="col-md-6 col-12">
+                                                        <div class="form-label-group">
+                                                            <input type="email" id="email-id-column" class="form-control" name="email-id-column" placeholder="Email">
+                                                            <label for="email-id-column">Email</label>
+                                                        </div>
+                                                    </div>*@
+                                                  
+                                                    <div class="col-12">
+                                                    <button  type="submit" class="btn btn-primary mr-1 mb-1 waves-effect waves-light">Submit</button>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- // Basic Floating Label Form section end -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
